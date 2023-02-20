@@ -1,5 +1,3 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import "./styles/App.scss";
 import Card from "./Card";
 import "./fonts/Outfit-Regular.ttf";
