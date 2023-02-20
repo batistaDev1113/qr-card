@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./variables";
+@font-face {
+  font-family: "Outfit-Regular";
+  src: url("../fonts/Outfit-Regular.ttf") format("truetype");
+}
+*,
+html {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Outfit-Regular";
+  height: 100vh;
+}
+#root {
+  background-color: $background-main;
+  height: 100vh;
+  .container-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 100%;
+    .card-container {
+      border-radius: 5%;
+      background-color: $card-background;
+      @media screen and (max-width: 390px) {
+        & {
+          width: 90vw;
+        }
+      }
+      img {
+        padding: 20px;
+        border-radius: 10%;
+      }
+      .card-inner-container {
+        padding: 0 40px;
+        .header-text {
+          color: $bold-text;
+          letter-spacing: 1px;
+          @media screen and (max-width: 390px) {
+            & {
+              font-size: 1.3rem;
+            }
+          }
+        }
+        .paragraph-text {
+          color: $light-text;
+        }
+      }
+    }
+  }
+}
